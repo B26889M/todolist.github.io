@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- bagian navbar -->
+    <nav>  
+        <div class="profil">
+            <img src="oar2.jpg" alt="" width="50px" height="50px" style="border-radius: 100%; margin: 5px;">
+            <p style="color: darkblue;">
+            Unknown
+            <br>
+            level :
+            <span class="js-level">#N/A</span>
+            </p>
+        </div>
+        <div class="Sign-in">
+            <button>
+                <a href="login.html">Login</a>
+            </button>
+            <button>
+                <a href="register.html">Daftar</a>
+            </button>
+            <!-- <button id="logout-btn">Keluar</button> -->
+        </div>
+    </nav>
+    <!-- bagian perisian -->
+  <div class="container">
+    <h1>Todo List</h1>
+    <div class="input-container">
+      <input class="todo-input" placeholder="Masukan text">
+      <input type="date" name="tanggal" id="" class="todo-date">
+      <input type="time" name="waktu" id="" class="todo-time">
+      <button class="add-button">
+        <i class="fa fa-plus-circle"></i>
+      </button>
+    </div>
+    <!-- bagian button (gagal)-->
+    <!-- <div class="filters">
+      <div class="filter" data-filter="completed">Sudah selesai</div>
+      <div class="filter" data-filter="pending">Belum selesai</div>
+      <div class="delete-all">hapus semua</div>
+    </div> -->
+    <!-- bagian container -->
+    <div class="todos-container">
+      <!-- <ul class="todos"></ul> -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

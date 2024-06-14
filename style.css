@@ -1,0 +1,253 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    background: url(background.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .2);
+    padding: 20px 10px;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    position: fixed;
+    z-index: 2;
+}
+
+nav {
+    width: 100%;
+    align-items: center;
+    position: relative;
+}
+
+nav .sign-in button {
+    padding: 10px;
+    font-weight: 600px;
+    cursor: pointer;
+    transition: opacity 2s;
+    margin: 6px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+nav .sing-out button {
+    padding: 10px;
+    font-weight: 600px;
+    cursor: pointer;
+    transition: opacity 2s;
+    margin: 6px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+}
+
+.container {
+    /* font-family: 'Roboto' sans-serif; */
+    height: auto;
+    min-height: 20vh;
+    background: transparent;
+    border: 2px solid darkblue;
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    /* width: 500px; */
+    /* padding: 30px; */
+}
+
+h1 {
+    color: darkblue;
+    text-align: center;
+    margin-top: 35px;
+} 
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.todo-input {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid darkblue;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 10px 10px 20px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.todo-input::placeholder {
+    color: white;
+}
+
+.todo-date {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid darkblue;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 10px 10px 20px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.todo-time {
+    outline: none;
+    background-color: transparent;
+    border: 2px solid darkblue;
+    color: white;
+    border-radius: 25px;
+    font-size: 15px;
+    padding: 10px 10px 10px 20px;
+    flex: 1;
+    margin-right: 10px;
+}
+
+.add-button {
+    background: darkblue;
+    color: white;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    font-size: 25px;
+}
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: darkblue;
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 10px 12px;
+    transition: all 0.2s ease;
+    list-style: none;
+    border: 2px solid gray;
+}
+
+.todo:first-child {
+    margin-top: 0;
+}
+
+.todo:last-child {
+    margin-bottom: 0;
+}
+
+.todo:hover {
+    background-color: gray;
+}
+
+.todo label {
+    color: white;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    width: fit-content;
+    font-family: 'Roboto', sans-serif;
+}
+
+.todo span {
+    position: relative;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+span::before {
+    content: "";
+    margin-left: -30px;
+    position: absolute;
+    border-radius: 100px;
+    height: 20px;
+    width: 20px;
+    border: 2px solid darkblue;
+}
+
+input[type='checkbox'] {
+    visibility: hidden;
+}
+
+input:checked + span {
+    text-decoration: line-through
+}
+
+.todo:hover input:checked + span::before, input:checked + span::before {
+    background: url(Screenshot\ 2024-06-02\ 181329.png) 50% 50% no-repeat darkblue;
+    border-color: blue;
+}
+
+.todo:hover span::before {
+    border-color: #eee;
+}
+
+.todo .delete-btn  {
+    border: none;
+    font-size: 24px;
+    background-color: transparent;
+    cursor: pointer;
+    color: darkblue;
+}
+
+.todos-container  {
+    height: 300px;
+    overflow: overlay;
+    color: white;
+}
+
+.todos-container::-webkit-scrollbar-track  {
+    background: darkblue;
+    border-radius: 20px
+}
+
+.filters {
+    justify-content: space-between;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.filter {
+    color: #eee;
+    padding: 5px 15px;
+    border-radius: 100px;
+    border: 2px solid darkblue;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.filter.active, .filter:hover {
+    background-color: darkblue;
+}
+  
+.delete-all {
+    display: flex;
+    color: #eee;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 7px 15px;
+}
+.delete-all:hover {
+    background-color: darkblue;
+    border-radius: 5px;
+}
